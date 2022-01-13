@@ -20,13 +20,13 @@ Para listar animais basta fazer uma requisição `GET` no endpoint `/animals`. E
 
 ```json
 [
-	{
-	  "name": "Barth",
-    "specie": "Dog",
-    "breed": "Undefined",
-    "userId": 1,
-    "id": 1
-  }
+    {
+        "name": "Barth",
+    	"specie": "Dog",
+    	"breed": "Undefined",
+    	"userId": 1,
+    	"id": 1
+    }
 ]
 ```
 
@@ -40,9 +40,9 @@ O `body` da requisição deve conter os seguintes campos, sendo obrigatórios o 
 
 ```json
 {
-	"email": "jhondoe@mail.com",
-	"password": "******",
-  "name": "Jhon Doe",
+    "email": "jhondoe@mail.com",
+    "password": "******",
+    "name": "Jhon Doe",
 }
 ```
 
@@ -52,12 +52,12 @@ Caso corra tudo bem, esse é o formato da resposta:
 
 ```json
 {
-"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impob25kb2VAbWFpbC5jb20iLCJpYXQiOjE2NDIwOTI0NTMsImV4cCI6MTY0MjA5NjA1Mywic3ViIjoiMSJ9.f5wwehC5t5ER2dgmA-o560MjcOhzyyLxG7XrDvjwSuQ",
-	"user": {
-	  "email": "jhondoe@mail.com",
-	  "name": "Jhon Doe",
-    "id": 1
-  }
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impob25kb2VAbWFpbC5jb20iLCJpYXQiOjE2NDIwOTI0NTMsImV4cCI6MTY0MjA5NjA1Mywic3ViIjoiMSJ9.f5wwehC5t5ER2dgmA-o560MjcOhzyyLxG7XrDvjwSuQ",
+        "user": {
+	    "email": "jhondoe@mail.com",
+	    "name": "Jhon Doe",
+            "id": 1
+}
 ```
 
 ### Possíveis Erros 💣
@@ -88,8 +88,8 @@ Alguns endpoints exigem que o usuário esteja logado. Essa é a estrutura base d
 
 ```json
 {
-	"email": "jhondoe@mail.com",
-  "password": "123456"
+    "email": "jhondoe@mail.com",
+    "password": "123456"
 }
 ```
 
@@ -99,12 +99,12 @@ Se tudo der certo, essa é a resposta esperada:
 
 ```json
 {
-	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impob25kb2VAbWFpbC5jb20iLCJpYXQiOjE2NDIxMDA5NDEsImV4cCI6MTY0MjEwNDU0MSwic3ViIjoiMSJ9.kayLOprKoebmHalz5vb7mFj7zQ39-QrCVZTc8FEgbu4",
-	  "user": {
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impob25kb2VAbWFpbC5jb20iLCJpYXQiOjE2NDIxMDA5NDEsImV4cCI6MTY0MjEwNDU0MSwic3ViIjoiMSJ9.kayLOprKoebmHalz5vb7mFj7zQ39-QrCVZTc8FEgbu4",
+        "user": {
 	    "email": "jhondoe@mail.com",
-      "name": "Jhon Doe",
-      "id": 1
-    }
+            "name": "Jhon Doe",
+            "id": 1
+        }
 }
 ```
 
@@ -140,10 +140,10 @@ Para cadastrar os animais, é necessário que o usuário esteja logado. Entretan
 
 ```json
 {
-	"name": "Barth",
-  "specie": "Dog",
-  "breed": "Undefined",
-  "userId": 1,
+    "name": "Barth",
+    "specie": "Dog",
+    "breed": "Undefined",
+    "userId": 1,
 }
 ```
 
@@ -151,11 +151,11 @@ Para cadastrar os animais, é necessário que o usuário esteja logado. Entretan
 
 ```json
 {
-	"name": "Bethoven",
-  "specie": "Dog",
-  "breed": "Undefined",
-  "userID": 1,
-  "id": 2
+    "name": "Bethoven",
+    "specie": "Dog",
+    "breed": "Undefined",
+    "userID": 1,
+    "id": 2
 }
 ```
 
@@ -167,11 +167,11 @@ O usuário só pode cadastrar vacinas se for o dono do animal. Dessa forma é ne
 
 ```json
 {
-	"name": "Parvovirus",
-	"vaccination-year": "2021",
-	"animalId": 1,
-	"userId": 1,
-	"id": 1
+    "name": "Parvovirus",
+    "vaccination-year": "2021",
+    "animalId": 1,
+    "userId": 1,
+    "id": 1
 }
 ```
 
@@ -203,19 +203,19 @@ Para listar as vacinas o usuário deve estar logado.
 
 ```json
 [
-	{
-	  "name": "Parvovirus",
-    "vaccination-year": "2021",
-    "animalId": 1,
-    "userId": 1,
-    "id": 1
+  {
+      "name": "Parvovirus",
+      "vaccination-year": "2021",
+      "animalId": 1,
+      "userId": 1,
+      "id": 1
   },
   {
-    "name": "Rabies",
-    "vaccination-year": "2021",
-    "animalId": 1,
-    "userId": 1,
-    "id": 2
+      "name": "Rabies",
+      "vaccination-year": "2021",
+      "animalId": 1,
+      "userId": 1,
+      "id": 2
   }
 ]
 ```
