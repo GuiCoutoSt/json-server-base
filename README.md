@@ -1,28 +1,18 @@
 # vaccine-my-pet-API 🐕
 
----
-
 Seja bem-vindo(a) à my-pet-API. Essa API te o objetivo de cadastrar seu pet e registrar sua vacinação, para acompanhar a saúde e bem estar do seu amiguinho.
 
 # URL Base 🔗
-
----
 
 `https://vaccine-my-pet-api.herokuapp.com/`
 
 # Endpoints 🔚
 
----
-
 Essa API possuí 4 endpoints: `register`, `login`, `animals` e `vaccines`. É possível cadastrar usuários, realizar login, cadastrar animais e quais vacinas foram aplicadas. A listagem dos usuário e das vacinas necessita de autenticação. Já a de animais pode ser visualizada sem autenticação.
 
 # Rotas que não precisam de autenticação 🔓
 
----
-
 ## Listando Animais 🐶
-
----
 
 Para listar animais basta fazer uma requisição `GET` no endpoint `/animals`. Essa requisição retornará a lista de todos os animais registrados no sistema. 
 
@@ -41,8 +31,6 @@ Para listar animais basta fazer uma requisição `GET` no endpoint `/animals`. E
 ```
 
 ## Cadastro de Usuários 👤
-
----
 
 Para cadastrar um usuário é necessário realizar uma requisição `POST` com o endpoint `/register`.
 
@@ -74,8 +62,6 @@ Caso corra tudo bem, esse é o formato da resposta:
 
 ### Possíveis Erros 💣
 
----
-
 `POST /register - FORMATO DA RESPOSTA - STATUS 400`
 
 ```
@@ -95,8 +81,6 @@ Caso corra tudo bem, esse é o formato da resposta:
 ```
 
 ## Login 💻
-
----
 
 Alguns endpoints exigem que o usuário esteja logado. Essa é a estrutura base do `body` da requisição:
 
@@ -126,8 +110,6 @@ Se tudo der certo, essa é a resposta esperada:
 
 ### Possíveis Erros 💣
 
----
-
 `POST /register - FORMATO DA RESPOSTA - STATUS 400`
 
 ```
@@ -148,13 +130,9 @@ Se tudo der certo, essa é a resposta esperada:
 
 # Rotas que necessitam de autenticação 🔒
 
----
-
 Essas requisições necessitam do Bearer Token do usuário para serem efetuadas!
 
 ## Cadastrando Animais 🐯
-
----
 
 Para cadastrar os animais, é necessário que o usuário esteja logado. Entretanto, qualquer um pode requisitar a listagem dos animais. O `body` da requisição tem o seguinte formato:
 
@@ -182,8 +160,6 @@ Para cadastrar os animais, é necessário que o usuário esteja logado. Entretan
 ```
 
 ## Cadastrando Vacinas 💉
-
----
 
 O usuário só pode cadastrar vacinas se for o dono do animal. Dessa forma é necessário informar o `userId` do usuário que registrou o animal. O `body` da requisição deve seguir esse formato:
 
@@ -213,8 +189,6 @@ O usuário só pode cadastrar vacinas se for o dono do animal. Dessa forma é ne
 
 ### Possíveis Erros 💣
 
----
-
 `POST /vaccine - FORMATO DA RESPOSTA - STATUS 400`
 
 ```
@@ -222,8 +196,6 @@ O usuário só pode cadastrar vacinas se for o dono do animal. Dessa forma é ne
 ```
 
 ## Listando Vacinas 💉
-
----
 
 Para listar as vacinas o usuário deve estar logado.
 
@@ -249,8 +221,6 @@ Para listar as vacinas o usuário deve estar logado.
 ```
 
 ### Possíveis Erros 💣
-
----
 
 `GET /vaccines - FORMATO DA RESPOSTA - STATUS 401`
 
