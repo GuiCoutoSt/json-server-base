@@ -1,4 +1,4 @@
-# vaccine-my-pet-API 🐕
+# vaccine-my-pet-api 🐕
 
 Seja bem-vindo(a) à my-pet-API. Essa API te o objetivo de cadastrar seu pet e registrar sua vacinação, para acompanhar a saúde e bem estar do seu amiguinho.
 
